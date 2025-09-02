@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\EmployeeInformation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|c:\\users\\user\\source\\repos\\employeeinformation\\employeeinformation\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|solutionrelative:employeeinformation\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|C:\\Users\\User\\source\\repos\\EmployeeInformation\\employeeinformation\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|solutionrelative:employeeinformation\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|c:\\users\\user\\source\\repos\\employeeinformation\\employeeinformation\\employeeinformation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|solutionrelative:employeeinformation\\employeeinformation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|c:\\users\\user\\source\\repos\\employeeinformation\\employeeinformation\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|solutionrelative:employeeinformation\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|c:\\users\\user\\source\\repos\\employeeinformation\\employeeinformation\\employeeinformation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|solutionrelative:employeeinformation\\employeeinformation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|c:\\users\\user\\source\\repos\\employeeinformation\\employeeinformation\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{454A8F74-88D9-44D7-ACFE-E078D6820A41}|EmployeeInformation\\EmployeeInformation.csproj|solutionrelative:employeeinformation\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "EmployeeInformation.csproj",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\EmployeeInformation\\EmployeeInformation\\EmployeeInformation.csproj",
               "RelativeDocumentMoniker": "EmployeeInformation\\EmployeeInformation.csproj",
@@ -38,7 +38,8 @@
               "RelativeToolTip": "EmployeeInformation\\EmployeeInformation.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-25T15:00:47.701Z"
+              "WhenOpened": "2025-08-25T15:00:47.701Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -48,13 +49,14 @@
               "RelativeDocumentMoniker": "EmployeeInformation\\DataBase.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\EmployeeInformation\\EmployeeInformation\\DataBase.cs",
               "RelativeToolTip": "EmployeeInformation\\DataBase.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAwwDcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAADwvy4AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T15:01:06.904Z"
+              "WhenOpened": "2025-08-25T15:01:06.904Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\EmployeeInformation\\EmployeeInformation\\Form1.cs",
               "RelativeDocumentMoniker": "EmployeeInformation\\Form1.cs",
@@ -66,13 +68,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\EmployeeInformation\\EmployeeInformation\\Form1.cs",
               "RelativeDocumentMoniker": "EmployeeInformation\\Form1.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\EmployeeInformation\\EmployeeInformation\\Form1.cs",
               "RelativeToolTip": "EmployeeInformation\\Form1.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAD4v1IAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAIAwwEQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T17:40:50.22Z",
               "EditorCaption": ""

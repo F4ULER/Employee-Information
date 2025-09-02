@@ -1,5 +1,5 @@
 using System.Data;
-using System.Linq;
+using System.Globalization;
 
 namespace EmployeeInformation
 {
@@ -8,12 +8,7 @@ namespace EmployeeInformation
         public Form1()
         {
             InitializeComponent();
-            panelFilter.Visible = false;
-            panelSort.Visible = false;
-            dataGridView.Visible = false;
-            buttonSort.Visible = false;
-            buttonFilter.Visible = false;
-            buttonSearch.Visible = false;
+
             StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -57,38 +52,75 @@ namespace EmployeeInformation
 
         private void buttonFilter_Click(object sender, EventArgs e)
         {
-            panelFilter.Visible = true;
+            if (panelFilter.Visible == false)
+            {
+                panelFilter.Visible = true;
 
-            comboBoxStatus.DataSource = definingUniqueValues(1);
-            comboBoxDep.DataSource = definingUniqueValues(2);
-            comboBoxPost.DataSource = definingUniqueValues(3);
-            
+                comboBoxStatus.DataSource = definingUniqueValues(1);
+                comboBoxDep.DataSource = definingUniqueValues(2);
+                comboBoxPost.DataSource = definingUniqueValues(3);
+            }
+            else
+            {
+                panelFilter.Visible = false;
+                comboBoxStatus.SelectedText = "";
+                comboBoxDep.SelectedText = "";
+                comboBoxPost.SelectedText = "";
+            }
+
         }
 
         private void buttonSort_Click(object sender, EventArgs e)
         {
-            panelSort.Visible = true;
+            if (panelSort.Visible == false)
+                panelSort.Visible = true;
+            else
+            {
+                panelSort.Visible = false;
+                RadioButton[] radioButtons = { rBFIO, rBStatus, rBDep, rBPost, rBDateEmploy, rBDateUneploy };
+                foreach (var radioButton in radioButtons)
+                {
+                    if (radioButton.Checked)
+                    {
+                        radioButton.Checked = false;
+                    }
+                }
+            }
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             DataBase dataBase = new DataBase();
-            
-            RadioButton[] radioButtons = { rBFIO, rBStatus, rBDep, rBPost, rBDateEmploy, rBDateUneploy};
 
-            string sortBy = "";
+            RadioButton[] radioButtons = { rBFIO, rBStatus, rBDep, rBPost, rBDateEmploy, rBDateUneploy };
+
+            string sortBy = "", 
+                    status = comboBoxStatus.SelectedValue != null ? comboBoxStatus.SelectedValue.ToString() : "", 
+                    dep = comboBoxDep.SelectedValue != null ? comboBoxDep.SelectedValue.ToString() : "", 
+                    post = comboBoxPost.SelectedValue != null ? comboBoxPost.SelectedValue.ToString() : "";
+
             foreach (var radioButton in radioButtons)
             {
                 if (radioButton.Checked)
                 {
                     sortBy = radioButton.Text;
-                }
+                } 
             }
 
-            string filter = "";
+            dataGridView.DataSource = dataBase.sendCommandOutputNotes(sortBy, status, dep, post, textBoxLastName.Text);
 
-            dataGridView.DataSource = dataBase.sendCommandOutputNotes(sortBy);
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            panelFilter.Visible = false;
+            panelSort.Visible = false;
+            dataGridView.Visible = false;
+            buttonSort.Visible = false;
+            buttonFilter.Visible = false;
+            buttonSearch.Visible = false;
+
+            textBoxLastName.Text = "";
         }
     }
 }

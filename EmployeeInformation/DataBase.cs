@@ -48,19 +48,19 @@ namespace EmployeeInformation
             {
                 return table;
             }
-            else { MessageBox.Show("Ошибка! \n Проверьте корректность введенных данных."); return table; }
+            else { MessageBox.Show("Записи не найдены!", "Ошибка"); return table; }
         }
 
-        public DataTable sendCommandOutputNotes(string sortBy = "", string filterCol = "", string filterValue = "")
+        public DataTable sendCommandOutputNotes(string sortBy = "", string filterStatus = "",
+            string filterDep = "", string filterPost = "", string filterLastName = "")
         {
             SqlCommand comm = new SqlCommand("OutputNotes", getSqlConnection());
             comm.CommandType = CommandType.StoredProcedure;
-            if (sortBy != "") { comm.Parameters.AddWithValue("@sortBy", sortBy); }
-            if (filterCol != "" && filterValue != "") 
-            { 
-                comm.Parameters.AddWithValue("@filterCol", filterCol);
-                comm.Parameters.AddWithValue("@filterValue", filterValue);
-            }
+            comm.Parameters.AddWithValue("@sortBy", sortBy);
+            comm.Parameters.AddWithValue("@filterStatus", filterStatus);
+            comm.Parameters.AddWithValue("@filterDep", filterDep);
+            comm.Parameters.AddWithValue("@filterPost", filterPost);
+            comm.Parameters.AddWithValue("@filterLastName", filterLastName);
             return sendCommand(comm);
         }
     }

@@ -295,6 +295,7 @@
             Controls.Add(buttonEmployeeInformation);
             Name = "Form1";
             Text = "Employee Information";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             panelFilter.ResumeLayout(false);
             panelFilter.PerformLayout();
