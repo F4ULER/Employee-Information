@@ -1,4 +1,5 @@
-﻿namespace EmployeeInformation
+﻿
+namespace EmployeeInformation
 {
     partial class Form1
     {
@@ -50,9 +51,23 @@
             rBStatus = new RadioButton();
             rBFIO = new RadioButton();
             buttonSearch = new Button();
+            panelStatistics = new Panel();
+            secondDateStatistics = new DateTimePicker();
+            firsrtDateStatistics = new DateTimePicker();
+            comboBoxDateNameStatistics = new ComboBox();
+            comboBoxStatusStatistics = new ComboBox();
+            buttonShowStatistics = new Button();
+            label7 = new Label();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label6 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             panelFilter.SuspendLayout();
             panelSort.SuspendLayout();
+            panelStatistics.SuspendLayout();
             SuspendLayout();
             // 
             // buttonEmployeeInformation
@@ -280,11 +295,145 @@
             buttonSearch.UseVisualStyleBackColor = false;
             buttonSearch.Click += buttonSearch_Click;
             // 
+            // panelStatistics
+            // 
+            panelStatistics.Controls.Add(secondDateStatistics);
+            panelStatistics.Controls.Add(firsrtDateStatistics);
+            panelStatistics.Controls.Add(comboBoxDateNameStatistics);
+            panelStatistics.Controls.Add(comboBoxStatusStatistics);
+            panelStatistics.Controls.Add(buttonShowStatistics);
+            panelStatistics.Controls.Add(label7);
+            panelStatistics.Controls.Add(label11);
+            panelStatistics.Controls.Add(label10);
+            panelStatistics.Controls.Add(label9);
+            panelStatistics.Controls.Add(label8);
+            panelStatistics.Controls.Add(label6);
+            panelStatistics.Controls.Add(label5);
+            panelStatistics.Location = new Point(231, 62);
+            panelStatistics.Name = "panelStatistics";
+            panelStatistics.Size = new Size(604, 275);
+            panelStatistics.TabIndex = 5;
+            // 
+            // secondDateStatistics
+            // 
+            secondDateStatistics.Location = new Point(385, 172);
+            secondDateStatistics.Name = "secondDateStatistics";
+            secondDateStatistics.Size = new Size(175, 27);
+            secondDateStatistics.TabIndex = 5;
+            secondDateStatistics.ValueChanged += dateTimePicker2_ValueChanged;
+            // 
+            // firsrtDateStatistics
+            // 
+            firsrtDateStatistics.Location = new Point(385, 143);
+            firsrtDateStatistics.Name = "firsrtDateStatistics";
+            firsrtDateStatistics.Size = new Size(175, 27);
+            firsrtDateStatistics.TabIndex = 5;
+            // 
+            // comboBoxDateNameStatistics
+            // 
+            comboBoxDateNameStatistics.FormattingEnabled = true;
+            comboBoxDateNameStatistics.Location = new Point(385, 109);
+            comboBoxDateNameStatistics.Name = "comboBoxDateNameStatistics";
+            comboBoxDateNameStatistics.Size = new Size(175, 28);
+            comboBoxDateNameStatistics.TabIndex = 3;
+            comboBoxDateNameStatistics.TextChanged += comboBoxDateNameStatistics_TextChanged;
+            // 
+            // comboBoxStatusStatistics
+            // 
+            comboBoxStatusStatistics.FormattingEnabled = true;
+            comboBoxStatusStatistics.Location = new Point(84, 140);
+            comboBoxStatusStatistics.Name = "comboBoxStatusStatistics";
+            comboBoxStatusStatistics.Size = new Size(145, 28);
+            comboBoxStatusStatistics.TabIndex = 3;
+            comboBoxStatusStatistics.TextChanged += comboBoxStatusStatistics_TextChanged;
+            // 
+            // buttonShowStatistics
+            // 
+            buttonShowStatistics.BackColor = SystemColors.Control;
+            buttonShowStatistics.Location = new Point(231, 205);
+            buttonShowStatistics.Name = "buttonShowStatistics";
+            buttonShowStatistics.Size = new Size(180, 56);
+            buttonShowStatistics.TabIndex = 0;
+            buttonShowStatistics.Text = "Выполнить";
+            buttonShowStatistics.UseVisualStyleBackColor = false;
+            buttonShowStatistics.Click += buttonShowStatistics_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(350, 177);
+            label7.Name = "label7";
+            label7.Size = new Size(29, 20);
+            label7.TabIndex = 4;
+            label7.Text = "По";
+            label7.Click += label7_Click;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(367, 64);
+            label11.Name = "label11";
+            label11.Size = new Size(210, 20);
+            label11.TabIndex = 4;
+            label11.Text = "По дате приема/увольнения";
+            label11.Click += label6_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(97, 64);
+            label10.Name = "label10";
+            label10.Size = new Size(81, 20);
+            label10.TabIndex = 4;
+            label10.Text = "По статусу";
+            label10.Click += label6_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(169, 10);
+            label9.Name = "label9";
+            label9.Size = new Size(258, 20);
+            label9.TabIndex = 4;
+            label9.Text = "Статистика количества сотрудников";
+            label9.Click += label6_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(338, 114);
+            label8.Name = "label8";
+            label8.Size = new Size(41, 20);
+            label8.TabIndex = 4;
+            label8.Text = "Дата";
+            label8.Click += label6_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(361, 143);
+            label6.Name = "label6";
+            label6.Size = new Size(18, 20);
+            label6.TabIndex = 4;
+            label6.Text = "С";
+            label6.Click += label6_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(17, 143);
+            label5.Name = "label5";
+            label5.Size = new Size(52, 20);
+            label5.TabIndex = 4;
+            label5.Text = "Статус";
+            label5.Click += label5_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1020, 528);
+            Controls.Add(panelStatistics);
             Controls.Add(panelSort);
             Controls.Add(panelFilter);
             Controls.Add(dataGridView);
@@ -301,7 +450,29 @@
             panelFilter.PerformLayout();
             panelSort.ResumeLayout(false);
             panelSort.PerformLayout();
+            panelStatistics.ResumeLayout(false);
+            panelStatistics.PerformLayout();
             ResumeLayout(false);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -328,5 +499,18 @@
         private RadioButton rBStatus;
         private RadioButton rBFIO;
         private Button buttonSearch;
+        private Panel panelStatistics;
+        private DateTimePicker secondDateStatistics;
+        private DateTimePicker firsrtDateStatistics;
+        private ComboBox comboBoxStatusStatistics;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private ComboBox comboBoxDateNameStatistics;
+        private Label label8;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Button buttonShowStatistics;
     }
 }

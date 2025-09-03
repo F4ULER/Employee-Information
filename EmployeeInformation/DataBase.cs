@@ -35,7 +35,6 @@ namespace EmployeeInformation
 
         protected DataTable sendCommand(SqlCommand comm)
         {
-
             openConnection();
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
@@ -48,7 +47,11 @@ namespace EmployeeInformation
             {
                 return table;
             }
-            else { MessageBox.Show("Записи не найдены!", "Ошибка"); return table; }
+            else 
+            { 
+                MessageBox.Show("Записи не найдены!", "Ошибка"); 
+                return table;
+            }
         }
 
         public DataTable sendCommandOutputNotes(string sortBy = "", string filterStatus = "",
@@ -62,6 +65,21 @@ namespace EmployeeInformation
             comm.Parameters.AddWithValue("@filterPost", filterPost);
             comm.Parameters.AddWithValue("@filterLastName", filterLastName);
             return sendCommand(comm);
+        }
+
+        public int sendCommandGetStatistics(string status = "", string dateName = "", 
+            string firstDate = "", string secondDate = "")
+        {
+            DataTable number = new DataTable();
+            SqlCommand comm = new SqlCommand("GetStatistics", getSqlConnection());
+            comm.CommandType = CommandType.StoredProcedure;
+            comm.Parameters.AddWithValue("@filterStatus", status);
+            comm.Parameters.AddWithValue("@DateName", dateName);
+            comm.Parameters.AddWithValue("@FirstDate", firstDate);
+            comm.Parameters.AddWithValue("@SecondDate", secondDate);
+
+            number = sendCommand(comm);
+            return (int)(number.Rows.Count > 0 ? (number.Rows[0][0] ?? 0) : 0);
         }
     }
 }
